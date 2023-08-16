@@ -115,6 +115,21 @@ header ul li a:hover{
 #home .textContent{
     width: 600px;
 }
+#home .textContent .getStartedBtn{
+    height: 50px;
+    width: 140px;
+    background-color: #292828;
+    color: white;
+    outline: none;
+    border: 1px solid black;
+    border-radius: 50px;
+    margin-top: 30px;
+    cursor: pointer;
+    transition:all 1.5s;
+}
+#home .textContent .getStartedBtn:hover{
+    background-color: #5b5858;
+}
 #home .textContent p{
     font-size: 20px;
     color: white;
