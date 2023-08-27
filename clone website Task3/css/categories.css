@@ -1,0 +1,64 @@
+.categoriesSection{
+    height: max-content;
+    width: 100%;
+    background-color: white;
+}
+.categoriesSection .categoriesHead{
+    height: 70px;
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    font-size: 25px;
+    padding-left: 15px;
+}
+.categoriesSection .categoriesHead>span{
+    margin-left: 10px;
+    position: relative;
+    font-weight: 700;
+}
+.categoriesSection .categoriesHead>span::after{
+    content: "";
+    height: 3px;
+    width: 30px;
+    background-color: red;
+    position: absolute;
+    margin-right: 20px;    
+    bottom: 0px;
+    right: -19px;
+}
+.categoriesSection .categoriesBox{
+    height: max-content;
+    width: 100%;
+    padding:20px 0px;
+    display: flex;
+    align-items: center;
+    overflow-x: auto;
+    padding-left: 40px;
+}
+.categoriesSection .categoriesBox .eachCategoryItem{
+    height:max-content;
+    min-width: 95px;
+    margin-left: 40px;
+    /* background-color: blue; */
+}
+.categoriesSection .categoriesBox .eachCategoryItem1{
+   margin-left: 0px;
+}
+.categoriesSection .categoriesBox .eachCategoryItem .eachCategoryImage{
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.categoriesSection .categoriesBox .eachCategoryItem .eachCategoryImage img{
+    width: 100%;
+}
+.categoriesSection .categoriesBox .eachCategoryItem .eachCategoryText{
+    height:max-content;
+    text-align: center;
+    font-weight: 700;
+    font-size: 14px;
+}
+.categoriesSection .categoriesBox::-webkit-scrollbar{
+    display: none;
+}

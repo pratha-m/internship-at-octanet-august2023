@@ -1,0 +1,149 @@
+footer{
+    height: max-content;
+    padding: 30px;
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    background-color: #e7f0f5;
+}
+footer .companyInfoMain{
+    height:max-content;
+    width: 400px;
+    /* background-color: red; */
+    display: flex;
+    padding: 3px;
+}
+footer .companyInfoMain .companyInfoInner{
+    display: flex;
+    flex-direction: column;
+}
+footer .companyInfoMain .companyInfoInner .footerLogo{
+    height:150px;
+    width:150px;
+}
+footer .companyInfoMain .companyInfoInner .emailInput{
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-wrap: wrap;
+    width: 100%;
+}
+footer .companyInfoMain .companyInfoInner .emailInput input{
+    height: 80%;
+    width: 80%;
+    border: none;
+    border-radius: 10px;
+    padding-left: 5px;
+    outline: none;
+}
+footer .companyInfoMain .companyInfoInner .emailInput button{
+    margin: 5px;
+    height: 30px;
+    width: 30px;
+    border: 1px solid #938f94;
+    border-radius: 50%;
+    color:#938f94;
+}
+footer .companyInfoMain .companyInfoInner .subscribeText{
+    font-size: 30px;
+    word-wrap: break-word;
+}
+footer .companyInfoMain .companyInfoInner .footerLogo img{
+    height: 100%;
+    width: 100%;
+}
+
+footer .shopInfo{
+    height: max-content;
+    width: 350px;
+    /* background-color: blue; */
+    padding-left: 5px;
+}
+footer .shopInfo .footerShopHead{
+   height: 50px;
+   font-size: 25px;
+   display: flex;
+   align-items: center;
+}
+footer .shopInfo .footerShopItems ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    list-style: none;
+}
+footer .shopInfo .footerShopItems ul li{
+    width: 45%;
+    height: max-content;
+    padding: 15px 0px;
+}
+footer .shopInfo .footerShopItems ul li a{
+    text-decoration: none;
+    color: black;
+}
+
+footer .helpInfo{
+    height: max-content;
+    width: 230px;
+    /* background-color: pink;   */
+    padding-left: 30px;
+}
+footer .helpInfo .footerHelpHead{
+    height: 50px;
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+}
+footer .helpInfo .footerHelpItems ul{
+     display: flex;
+     flex-direction: column;
+     list-style: none;
+}
+footer .helpInfo .footerHelpItems ul li{
+    padding: 10px 0px;
+}
+footer .helpInfo .footerHelpItems ul li a{
+    text-decoration: none;
+    color: black;
+} 
+
+footer .companyInfo{
+    height:max-content;
+    width: 230px;
+    /* background-color:gray;  */
+    padding-left: 30px;
+}
+footer .companyInfo .footerCompanyHead{
+    height: 50px;
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+}
+footer .companyInfo .footerCompanyItems ul{
+    display: flex;
+     flex-direction: column;
+     list-style: none;
+}
+footer .companyInfo .footerCompanyItems ul li{
+    padding: 10px 0px;
+}
+footer .companyInfo .footerCompanyItems ul li a{
+    text-decoration: none;
+    color: black;
+}
+
+@media screen and (max-width:894px){
+    footer{
+        flex-wrap: wrap;
+    }
+    .footer .shopInfo{
+        padding-left: 0px;
+    }
+    footer .companyInfo{
+        padding-left: 0px;
+    }
+    .footer .helpInfo{
+        padding-left: 0px;  
+    }
+}

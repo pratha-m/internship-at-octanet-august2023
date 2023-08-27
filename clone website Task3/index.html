@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boat Website Clone</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/imageSlider.css">
+    <link rel="stylesheet" href="css/bestSellers.css">
+    <link rel="stylesheet" href="css/dailyDeals.css">
+    <link rel="stylesheet" href="css/categories.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <script src="https://kit.fontawesome.com/ae82594478.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <div class="logoAndOptions">
+            <div class="logo">
+                <img src="https://www.boat-lifestyle.com/cdn/shop/files/boAt_logo_small.svg?v=1682421543" alt="">
+            </div>
+            <div class="otherOptions hideSideBar" id="sideBar">
+               <div class="eachOption"><span>Categories<svg focusable="false" width="7" height="10" class="icon icon--dropdown-arrow-right    icon--direction-aware" viewBox="0 0 7 10">      <path fill-rule="evenodd" clip-rule="evenodd" d="M3.9394 5L0.469727 1.53033L1.53039 0.469666L6.06072 5L1.53039 9.53032L0.469727 8.46967L3.9394 5Z" fill="currentColor"></path>    </svg></span></div>
+               <div class="eachOption" ><span>Daily Deals</span></div>
+               <div class="eachOption"><span>Gift With Boat</span></div>
+               <div class="eachOption"><span>More<svg focusable="false" width="7" height="10" class="icon icon--dropdown-arrow-right    icon--direction-aware" viewBox="0 0 7 10">      <path fill-rule="evenodd" clip-rule="evenodd" d="M3.9394 5L0.469727 1.53033L1.53039 0.469666L6.06072 5L1.53039 9.53032L0.469727 8.46967L3.9394 5Z" fill="currentColor"></path>    </svg> </span></div>
+            </div>
+        </div>
+        <div class="searchAndOptions">
+            <div class="searchContainer">
+                <div>
+                <label for="searchInput">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"/></svg>
+                </label>
+                <input type="text" id="searchInput">
+            </div>
+            </div>
+            <div class="cartAndAccount">
+                <span>
+                <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512H418.3c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304H178.3z"/></svg>
+                </span>
+                <span>
+                <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M160 112c0-35.3 28.7-64 64-64s64 28.7 64 64v48H160V112zm-48 48H48c-26.5 0-48 21.5-48 48V416c0 53 43 96 96 96H352c53 0 96-43 96-96V208c0-26.5-21.5-48-48-48H336V112C336 50.1 285.9 0 224 0S112 50.1 112 112v48zm24 48a24 24 0 1 1 0 48 24 24 0 1 1 0-48zm152 24a24 24 0 1 1 48 0 24 24 0 1 1 -48 0z"/></svg>
+                </span>
+            </div> 
+        </div>
+        <div class="hamburger" id="hamburger">
+            <img src="images/burger.png" alt="">
+        </div>
+        <div class="sideBarOverlay hideOverlay" id="sideBarOverlay"></div>
+    </header>
+    
+    <section id="imageSliderSection" class="imageSlider">
+            <div class="prenextBtns">
+                <button id="prevBtn"><i class="fa fa-chevron-left"></i></button>
+                <button id="nextBtn"><i class="fa fa-chevron-right"></i></button>
+            </div>
+            <div class="navBtns">
+                <div class="navBtnsInner">
+                  <div id="navBtn1" class="eachNavBtn" onclick="btn1Func()"></div>
+                  <div id="navBtn2" class="eachNavBtn" onclick="btn2Func()"></div>
+                  <div id="navBtn3" class="eachNavBtn" onclick="btn3Func()"></div>
+                  <div id="navBtn4" class="eachNavBtn" onclick="btn4Func()"></div>
+                </div>
+            </div>
+            <div class="images">
+                <img src="https://www.boat-lifestyle.com/cdn/shop/files/Wave-Neo-Plus_Web_1440x.jpg?v=1692692816" class="eachSlide" id="first-img" alt="">
+                <img src="https://www.boat-lifestyle.com/cdn/shop/files/Ring_Desktop_1440x.png?v=1692696307" class="eachSlide" alt="">
+                <img src="https://www.boat-lifestyle.com/cdn/shop/files/IM161_WEB_1440x.jpg?v=1692686111" class="eachSlide" alt="">
+                <img src="https://www.boat-lifestyle.com/cdn/shop/files/Wave_sigma_WEB_1440x.jpg?v=1692726820" class="eachSlide" alt="">
+            </div>
+    </section>
+
+    <section id="bestSellersSection" class="bestSellersSection">
+        <div class="bestSellerHead">Explore <span>Bestsellers</span></div>
+        <div class="bestSellersBox">
+            <div class="eachBestSeller firstBestSeller">
+                <div class="eachBestSellerVid">
+                    <video src="videos/bestSellers/smartwatch.mp4" autoplay muted loop></video>
+                </div>
+                <div class="eachBestSellerText">Smartwatches</div>
+            </div>
+            <div class="eachBestSeller">
+                <div class="eachBestSellerVid">
+                    <video src="videos/bestSellers/earbuds.mp4" autoplay muted loop></video>
+                </div>
+                <div class="eachBestSellerText">Wireless Earbuds</div>
+            </div>
+            <div class="eachBestSeller">
+                <div class="eachBestSellerVid">
+                    <video src="videos/bestSellers/neckbands.mp4" autoplay muted loop></video>
+                </div>
+                <div class="eachBestSellerText">Neckbands</div>
+            </div>
+            <div class="eachBestSeller">
+                <div class="eachBestSellerVid">
+                    <video src="videos/bestSellers/headphones.mp4" autoplay muted loop></video>
+                </div>
+                <div class="eachBestSellerText">Headphones</div>
+            </div>
+            <div class="eachBestSeller">
+                <div class="eachBestSellerVid">
+                    <video src="videos/bestSellers/speakers.mp4" autoplay muted loop></video>
+                </div>
+                <div class="eachBestSellerText">Wireless Speakers</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="dailyDealsSection" class="dailyDealsSection">
+        <div class="dailyDealsHead">Daily <span>Deals</span></div>
+        <div class="dailyDealsBox">
+            <div class="eachDailyDealProduct firstDailyDealProduct">
+                <div class="imageAndLabels">
+                    <div class="image">
+                        <img src="images/dailydeals/image1.webp" alt="">
+                    </div>
+                    <div class="labels">
+                        <div class="dailyLabelOffer">🚀 Bestseller</div>
+                        <div class="dailyLabelFeature">
+                            <span>60 hours playback</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="textContent">
+                    <div class="eachDailyTextBox dailyTextBox1">
+                        <div class="dailyStarRating">
+                            <div>
+                                <i class="fa fa-solid fa-star"></i>
+                                <span>4.8</span> 
+                            </div>
+                        </div>
+                        <div class="dailyProductName">
+                            <span>Airdopes 131</span>
+                        </div>
+                        <div class="dailyProductPrices">
+                            <div class="dailyProductOriginalPrice">₹999</div>
+                            <div class="dailyProductCutPrice">₹2,990</div>
+                            <div class="dailyProductOffPercent">67% off</div>
+                        </div>
+                    </div>
+                    <div class="eachDailyTextBox dailyTextBox2">
+                      <div class="dailyProductColors">
+                        <div class="colorsBox">
+                            <span class="eachColor eachColor1"></span>
+                            <span class="eachColor eachColor2"></span>
+                            <span class="eachColor eachColor3"></span>
+                        </div>
+                        <span class="moreColorNumber">+4</span>
+                      </div>
+                      <div class="addToCartButton">
+                        <button>Add To Cart</button>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div class="eachDailyDealProduct firstDailyDealProduct">
+                <div class="imageAndLabels">
+                    <div class="image">
+                        <img src="images/dailydeals/image2.webp" alt="">
+                    </div>
+                    <div class="labels">
+                        <div class="dailyLabelFeature">
+                            <span>BT Calling</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="textContent">
+                    <div class="eachDailyTextBox dailyTextBox1">
+                        <div class="dailyStarRating">
+                            <div>
+                                <i class="fa fa-solid fa-star"></i>
+                                <span>4.9</span> 
+                            </div>
+                        </div>
+                        <div class="dailyProductName">
+                            <span>Wave Call</span>
+                        </div>
+                        <div class="dailyProductPrices">
+                            <div class="dailyProductOriginalPrice">₹1,799</div>
+                            <div class="dailyProductCutPrice">₹7,990</div>
+                            <div class="dailyProductOffPercent">77% off</div>
+                        </div>
+                    </div>
+                    <div class="eachDailyTextBox dailyTextBox2">
+                      <div class="dailyProductColors">
+                        <div class="colorsBox">
+                            <span class="eachColor eachColor1"></span>
+                            <span class="eachColor eachColor2"></span>
+                            <span class="eachColor eachColor3"></span>
+                        </div>
+                        <span class="moreColorNumber">+2</span>
+                      </div>
+                      <div class="addToCartButton">
+                        <button>Add To Cart</button>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div class="eachDailyDealProduct firstDailyDealProduct">
+                <div class="imageAndLabels">
+                    <div class="image">
+                        <img src="images/dailydeals/image3.webp" alt="">
+                    </div>
+                    <div class="labels">
+                        <div class="dailyLabelOffer">₹200 OFF ON BIG200</div>
+                        <div class="dailyLabelFeature">
+                            <span>40 hours playback</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="textContent">
+                    <div class="eachDailyTextBox dailyTextBox1">
+                        <div class="dailyStarRating">
+                            <div>
+                                <i class="fa fa-solid fa-star"></i>
+                                <span>4.8</span> 
+                            </div>
+                        </div>
+                        <div class="dailyProductName">
+                            <span>Airdopes 141</span>
+                        </div>
+                        <div class="dailyProductPrices">
+                            <div class="dailyProductOriginalPrice">₹1,300</div>
+                            <div class="dailyProductCutPrice">₹4,440</div>
+                            <div class="dailyProductOffPercent">71% off</div>
+                        </div>
+                    </div>
+                    <div class="eachDailyTextBox dailyTextBox2">
+                      <div class="dailyProductColors">
+                        <div class="colorsBox">
+                            <span class="eachColor eachColor1"></span>
+                            <span class="eachColor eachColor2"></span>
+                            <span class="eachColor eachColor3"></span>
+                        </div>
+                        <span class="moreColorNumber">+3</span>
+                      </div>
+                      <div class="addToCartButton">
+                        <button>Add To Cart</button>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div class="eachDailyDealProduct firstDailyDealProduct">
+                <div class="imageAndLabels">
+                    <div class="image">
+                        <img src="images/dailydeals/image4.webp" alt="">
+                    </div>
+                    <div class="labels">
+                        <div class="dailyLabelFeature">
+                            <span>8 hours playback</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="textContent">
+                    <div class="eachDailyTextBox dailyTextBox1">
+                        <div class="dailyStarRating">
+                            <div>
+                                <i class="fa fa-solid fa-star"></i>
+                                <span>4.8</span> 
+                            </div>
+                        </div>
+                        <div class="dailyProductName">
+                            <span>Rokerz 235 v2</span>
+                        </div>
+                        <div class="dailyProductPrices">
+                            <div class="dailyProductOriginalPrice">₹899</div>
+                            <div class="dailyProductCutPrice">₹2,990</div>
+                            <div class="dailyProductOffPercent">70% off</div>
+                        </div>
+                    </div>
+                    <div class="eachDailyTextBox dailyTextBox2">
+                      <div class="dailyProductColors">
+                        <div class="colorsBox">
+                            <span class="eachColor eachColor1"></span>
+                            <span class="eachColor eachColor2"></span>
+                            <span class="eachColor eachColor3"></span>
+                        </div>
+                        <span class="moreColorNumber">+2</span>
+                      </div>
+                      <div class="addToCartButton">
+                        <button>Add To Cart</button>
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="categoriesSection" class="categoriesSection">
+        <div class="categoriesHead">Shop By <span>Categories</span></div>
+        <div class="categoriesBox">
+            <div class="eachCategoryItem eachCategoryItem1">
+                <div class="eachCategoryImage"><img src="images/categories/image1.webp" alt=""></div>
+                <div class="eachCategoryText">True Wireless Earbuds</div>
+            </div>
+            <div class="eachCategoryItem">
+                <div class="eachCategoryImage"><img src="images/categories/image2.webp" alt=""></div>
+                <div class="eachCategoryText">Neckbands</div>
+            </div>
+            <div class="eachCategoryItem">
+                <div class="eachCategoryImage"><img src="images/categories/image3.webp" alt=""></div>
+                <div class="eachCategoryText">Smart Watches</div>
+            </div>
+            <div class="eachCategoryItem">
+                <div class="eachCategoryImage"><img src="images/categories/image4.webp" alt=""></div>
+                <div class="eachCategoryText">Wireless Headphones</div>
+            </div>
+            <div class="eachCategoryItem">
+                <div class="eachCategoryImage"><img src="images/categories/image5.webp" alt=""></div>
+                <div class="eachCategoryText">Wireless Speakers</div>
+            </div>
+            <div class="eachCategoryItem">
+                <div class="eachCategoryImage"><img src="images/categories/image6.webp" alt=""></div>
+                <div class="eachCategoryText">Wireless Headphones</div>
+            </div>
+            <div class="eachCategoryItem">
+                <div class="eachCategoryImage"><img src="images/categories/image7.webp" alt=""></div>
+                <div class="eachCategoryText">Wired Earphones</div>
+            </div>
+            <div class="eachCategoryItem">
+                <div class="eachCategoryImage"><img src="images/categories/image8.webp" alt=""></div>
+                <div class="eachCategoryText">Soundbars</div>
+            </div>
+            <div class="eachCategoryItem">
+                <div class="eachCategoryImage"><img src="images/categories/image9.webp" alt=""></div>
+                <div class="eachCategoryText">Gaming Headphones</div>
+            </div>
+            <div class="eachCategoryItem">
+                <div class="eachCategoryImage"><img src="images/categories/image10.webp" alt=""></div>
+                <div class="eachCategoryText">Party Speakers</div>
+            </div>
+            <div class="eachCategoryItem">
+                <div class="eachCategoryImage"><img src="images/categories/image11.webp" alt=""></div>
+                <div class="eachCategoryText">Trimmers</div>
+            </div>
+            <div class="eachCategoryItem">
+                <div class="eachCategoryImage"><img src="images/categories/image12.webp" alt=""></div>
+                <div class="eachCategoryText">Chargers</div>
+            </div>
+            <div class="eachCategoryItem">
+                <div class="eachCategoryImage"><img src="images/categories/image13.webp" alt=""></div>
+                <div class="eachCategoryText">Power Banks</div>
+            </div>
+            <div class="eachCategoryItem">
+                <div class="eachCategoryImage"><img src="images/categories/image14.webp" alt=""></div>
+                <div class="eachCategoryText">Cables</div>
+            </div>
+            <div class="eachCategoryItem">
+                <div class="eachCategoryImage"><img src="images/categories/image15.webp" alt=""></div>
+                <div class="eachCategoryText">Car Accessories</div>
+            </div>
+            <div class="eachCategoryItem">
+                <div class="eachCategoryImage"><img src="images/categories/image16.webp" alt=""></div>
+                <div class="eachCategoryText">TRebel Range</div>
+            </div>
+            <div class="eachCategoryItem">
+                <div class="eachCategoryImage"><img src="images/categories/image17.webp" alt=""></div>
+                <div class="eachCategoryText">Limited Editions</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="newLaunchesSection" class="dailyDealsSection">
+        <div class="dailyDealsHead">New <span>Launches</span></div>
+        <div class="dailyDealsBox">
+            <div class="eachDailyDealProduct firstDailyDealProduct">
+                <div class="imageAndLabels">
+                    <div class="image">
+                        <img src="images/newlaunches/image1.webp" alt="">
+                    </div>
+                    <div class="labels">
+                        <div class="dailyLabelOffer">🎉 New Launch</div>
+                        <div class="dailyLabelFeature">
+                            <span>60 hours playback</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="textContent">
+                    <div class="eachDailyTextBox dailyTextBox1">
+                        <div class="dailyStarRating">
+                            <div>
+                                <i class="fa fa-solid fa-star"></i>
+                                <span>4.8</span> 
+                            </div>
+                        </div>
+                        <div class="dailyProductName">
+                            <span>Airdopes 131</span>
+                        </div>
+                        <div class="dailyProductPrices">
+                            <div class="dailyProductOriginalPrice">₹999</div>
+                            <div class="dailyProductCutPrice">₹2,990</div>
+                            <div class="dailyProductOffPercent">67% off</div>
+                        </div>
+                    </div>
+                    <div class="eachDailyTextBox dailyTextBox2">
+                      <div class="dailyProductColors">
+                        <div class="colorsBox">
+                            <span class="eachColor eachColor1"></span>
+                            <span class="eachColor eachColor2"></span>
+                            <span class="eachColor eachColor3"></span>
+                        </div>
+                        <span class="moreColorNumber">+4</span>
+                      </div>
+                      <div class="addToCartButton">
+                        <button>Add To Cart</button>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div class="eachDailyDealProduct firstDailyDealProduct">
+                <div class="imageAndLabels">
+                    <div class="image">
+                        <img src="images/newlaunches/image2.webp" alt="">
+                    </div>
+                    <div class="labels">
+                        <div class="dailyLabelOffer">🎉 New Launch</div>
+                        <div class="dailyLabelFeature">
+                            <span>BT Calling</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="textContent">
+                    <div class="eachDailyTextBox dailyTextBox1">
+                        <div class="dailyStarRating">
+                            <div>
+                                <i class="fa fa-solid fa-star"></i>
+                                <span>4.9</span> 
+                            </div>
+                        </div>
+                        <div class="dailyProductName">
+                            <span>Wave Call</span>
+                        </div>
+                        <div class="dailyProductPrices">
+                            <div class="dailyProductOriginalPrice">₹1,799</div>
+                            <div class="dailyProductCutPrice">₹7,990</div>
+                            <div class="dailyProductOffPercent">77% off</div>
+                        </div>
+                    </div>
+                    <div class="eachDailyTextBox dailyTextBox2">
+                      <div class="dailyProductColors">
+                        <div class="colorsBox">
+                            <span class="eachColor eachColor1"></span>
+                            <span class="eachColor eachColor2"></span>
+                            <span class="eachColor eachColor3"></span>
+                        </div>
+                        <span class="moreColorNumber">+2</span>
+                      </div>
+                      <div class="addToCartButton">
+                        <button>Add To Cart</button>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div class="eachDailyDealProduct firstDailyDealProduct">
+                <div class="imageAndLabels">
+                    <div class="image">
+                        <img src="images/newlaunches/image3.webp" alt="">
+                    </div>
+                    <div class="labels">
+                        <div class="dailyLabelOffer">🎉 New Launch</div>
+                        <div class="dailyLabelFeature">
+                            <span>40 hours playback</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="textContent">
+                    <div class="eachDailyTextBox dailyTextBox1">
+                        <div class="dailyStarRating">
+                            <div>
+                                <i class="fa fa-solid fa-star"></i>
+                                <span>4.8</span> 
+                            </div>
+                        </div>
+                        <div class="dailyProductName">
+                            <span>Airdopes 141</span>
+                        </div>
+                        <div class="dailyProductPrices">
+                            <div class="dailyProductOriginalPrice">₹1,300</div>
+                            <div class="dailyProductCutPrice">₹4,440</div>
+                            <div class="dailyProductOffPercent">71% off</div>
+                        </div>
+                    </div>
+                    <div class="eachDailyTextBox dailyTextBox2">
+                      <div class="dailyProductColors">
+                        <div class="colorsBox">
+                            <span class="eachColor eachColor1"></span>
+                            <span class="eachColor eachColor2"></span>
+                            <span class="eachColor eachColor3"></span>
+                        </div>
+                        <span class="moreColorNumber">+3</span>
+                      </div>
+                      <div class="addToCartButton">
+                        <button>Add To Cart</button>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div class="eachDailyDealProduct firstDailyDealProduct">
+                <div class="imageAndLabels">
+                    <div class="image">
+                        <img src="images/newlaunches/image4.avif" alt="">
+                    </div>
+                    <div class="labels">
+                        <div class="dailyLabelOffer">🎉 New Launch</div>
+                        <div class="dailyLabelFeature">
+                            <span>8 hours playback</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="textContent">
+                    <div class="eachDailyTextBox dailyTextBox1">
+                        <div class="dailyStarRating">
+                            <div>
+                                <i class="fa fa-solid fa-star"></i>
+                                <span>4.8</span> 
+                            </div>
+                        </div>
+                        <div class="dailyProductName">
+                            <span>Rokerz 235 v2</span>
+                        </div>
+                        <div class="dailyProductPrices">
+                            <div class="dailyProductOriginalPrice">₹899</div>
+                            <div class="dailyProductCutPrice">₹2,990</div>
+                            <div class="dailyProductOffPercent">70% off</div>
+                        </div>
+                    </div>
+                    <div class="eachDailyTextBox dailyTextBox2">
+                      <div class="dailyProductColors">
+                        <div class="colorsBox">
+                            <span class="eachColor eachColor1"></span>
+                            <span class="eachColor eachColor2"></span>
+                            <span class="eachColor eachColor3"></span>
+                        </div>
+                        <span class="moreColorNumber">+2</span>
+                      </div>
+                      <div class="addToCartButton">
+                        <button>Add To Cart</button>
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="featuresProviding"></section>
+
+    <section id="shopByLifestyleSection"></section>
+
+    <section id="bestOfBoatSection"></section>
+
+    <section id="joinTribeSection"></section>
+
+    <footer id="footer" class="footer">
+        <div class="companyInfoMain">
+            <div class="companyInfoInner">
+                <div class="footerLogo">
+                   <img src="https://www.boat-lifestyle.com/cdn/shop/files/boAt_logo_small.svg?v=1682421543" alt="">
+                </div>
+                <div class="subscribeText">Subscribe to our email alerts !</div>
+                <div class="emailInput">
+                    <input type="text" placeholder="Enter your email address">
+                    <button><i class="fa fa-chevron-right"></i></button>
+                </div>
+            </div>
+        </div>
+        <div class="shopInfo">
+            <div class="footerShopHead">Shop</div>
+            <div class="footerShopItems">
+                <ul class="shopItems">
+                    <li><a href="#">True Wireless Earbuds</a></li>
+                    <li><a href="#">wired Headphones</a></li>
+                    <li><a href="#">Home Audio</a></li>
+                    <li><a href="#">Smart Watches</a></li>
+                    <li><a href="#">Misfit</a></li>
+                    <li><a href="#">Earn $100</a></li>
+                    <li><a href="#">Wireless Headphones</a></li>
+                    <li><a href="#">Wireless Speakers</a></li>
+                    <li><a href="#">Mobile Accessories</a></li>
+                    <li><a href="#">TRebel</a></li>
+                    <li><a href="#">Gift Card</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="helpInfo">
+            <div class="footerHelpHead">Help</div>
+            <div class="footerHelpItems">
+                <ul class="helpItems">
+                    <li><a href="#">Track Your Order</a></li>
+                    <li><a href="#">Waranty & Support</a></li>
+                    <li><a href="#">Return Policy</a></li>
+                    <li><a href="#">Service Centers</a></li>
+                    <li><a href="#">Bulk Orders</a></li>
+                    <li><a href="#">FAQ's</a></li>
+                    <li><a href="#">Why Buy Direct</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="companyInfo">
+            <div class="footerCompanyHead">Company</div>
+            <div class="footerCompanyItems">
+                <ul class="companyItems">
+                    <li><a href="#">About boat</a></li>
+                    <li><a href="#">News</a></li>
+                    <li><a href="#">Read Our Blog</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Security</a></li>
+                    <li><a href="#">Investor Relations</a></li>
+                    <li><a href="#">Social Responsibility</a></li>
+                    <li><a href="#">Warranty Policy</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/imageSlider.js"></script>
+    <script src="js/header.js"></script>
+</body>
+</html>

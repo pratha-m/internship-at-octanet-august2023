@@ -1,0 +1,264 @@
+.dailyDealsSection{
+    height: max-content;
+    width: 100%;
+    background-color: white;
+}
+.dailyDealsSection .dailyDealsHead{
+    height: 70px;
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    font-size: 25px;
+    padding-left: 15px;
+}
+.dailyDealsSection .dailyDealsHead>span{
+    margin-left: 10px;
+    position: relative;
+    font-weight: 700;
+}
+.dailyDealsSection .dailyDealsHead>span::after{
+    content: "";
+    height: 3px;
+    width: 30px;
+    background-color: red;
+    position: absolute;
+    margin-right: 20px;    
+    bottom: 0px;
+    right: -19px;
+}    
+.dailyDealsSection .dailyDealsBox{
+    height: max-content;
+    width: 100%;
+    padding:20px 0px;
+    display: flex;
+    align-items: center;
+    overflow-x: auto;
+    padding-left: 40px;
+}
+.dailyDealsSection .dailyDealsBox::-webkit-scrollbar{
+    display: none;
+}
+.dailyDealsSection .dailyDealsBox .eachDailyDealProduct{
+    height: 400px;
+    min-width: 340px;
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    margin: 0px 20px;
+    /* background-color: gray; */
+}
+.dailyDealsSection .dailyDealsBox .firstDailyDealProduct{
+    margin-left: 0px;
+}
+.dailyDealsSection .dailyDealsBox .firstDailyDealProduct .imageAndLabels{
+     height: 300px;
+     width: 100%;
+     position: relative;
+     /* background-color: blue; */
+}
+.dailyDealsSection .dailyDealsBox .firstDailyDealProduct .imageAndLabels .image{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #e1e1e1;
+    border-radius: 10px 10px 0px 0px
+}
+.dailyDealsSection .dailyDealsBox .firstDailyDealProduct .imageAndLabels .labels{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+.dailyDealsSection .dailyDealsBox .firstDailyDealProduct .imageAndLabels .labels .dailyLabelOffer{
+    position: absolute;
+    top: 20px;
+    left: 0;
+    height: max-content;
+    width: max-content;
+    background-color: black;
+    border-radius: 0px 5px 5px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 8px;
+    padding: 5px;
+    font-weight: 700;
+}
+.dailyDealsSection .dailyDealsBox .firstDailyDealProduct .imageAndLabels .labels .dailyLabelFeature{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -7px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.dailyDealsSection .dailyDealsBox .firstDailyDealProduct .imageAndLabels .labels .dailyLabelFeature span{
+    width: max-content;
+    height: max-content;
+    background-color: #fcc50b;
+    border-radius: 10px;  
+    font-size: 12px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 200px;     
+    border: 1px solid white;
+}
+.dailyDealsSection .dailyDealsBox .firstDailyDealProduct .imageAndLabels .image img{
+    height:100%;
+    width: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 10px 10px 0px 0px;
+}
+.dailyDealsSection .dailyDealsBox .firstDailyDealProduct .textContent{
+    height: 100px;
+    width: 100%;
+    background-color: #fafafa;
+    border-radius: 0px 0px 10px 10px;
+    display: flex;
+    padding: 12px 0px;
+    border: 1px solid #ECF0F4;
+}
+.dailyDealsSection .dailyDealsBox .firstDailyDealProduct .textContent .eachDailyTextBox{
+    height: 100%;      
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.dailyDealsSection .dailyDealsBox .firstDailyDealProduct .textContent .eachDailyTextBox .dailyStarRating{
+   height: 30px;
+   width: 100%;
+}
+.dailyDealsSection .dailyDealsBox .firstDailyDealProduct .textContent .eachDailyTextBox .dailyStarRating div{
+    height: 100%;
+    width: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    left: 10px;
+}
+.dailyDealsSection .dailyDealsBox .firstDailyDealProduct .textContent .eachDailyTextBox .dailyStarRating div i{
+    color: gold;
+    font-size: 13px;
+}
+.dailyDealsSection .dailyDealsBox .firstDailyDealProduct .textContent .eachDailyTextBox .dailyStarRating div span{
+    font-size: 14px;
+}
+.dailyDealsSection .dailyDealsBox .firstDailyDealProduct .textContent .eachDailyTextBox .dailyProductName{
+   height: 30px;
+   width: 100%;
+   display: flex;
+   align-items: center;
+   justify-content: start;
+    position: relative;
+    left: 9px;
+}
+.dailyDealsSection .dailyDealsBox .firstDailyDealProduct .textContent .eachDailyTextBox .dailyProductName span{
+    font-size: 16px;
+    font-weight: 700;
+}
+.dailyDealsSection .dailyDealsBox .firstDailyDealProduct .textContent .eachDailyTextBox .dailyProductPrices{
+   height: 30px;
+   width: 100%;
+   display: flex;
+   align-items: center;
+   justify-content: start;
+   position: relative;
+    left: 9px;
+}
+.dailyDealsSection .dailyDealsBox .firstDailyDealProduct .textContent .eachDailyTextBox .dailyProductPrices div{
+    margin-left: 3px;
+}
+.dailyDealsSection .dailyDealsBox .firstDailyDealProduct .textContent .eachDailyTextBox .dailyProductPrices .dailyProductOriginalPrice{
+    font-size: 16px;
+    font-weight: 700;
+}
+.dailyDealsSection .dailyDealsBox .firstDailyDealProduct .textContent .eachDailyTextBox .dailyProductPrices .dailyProductCutPrice{
+    font-size: 14px;
+    color: #b2b9bf;
+    text-decoration: line-through;
+    vertical-align: baseline;
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+}
+.dailyDealsSection .dailyDealsBox .firstDailyDealProduct .textContent .eachDailyTextBox .dailyProductPrices .dailyProductOffPercent{
+    font-size: 10px;
+    color: #12b985;
+    text-decoration: line-through;
+    vertical-align: baseline;
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+}
+.dailyDealsSection .dailyDealsBox .firstDailyDealProduct .textContent .dailyTextBox2{
+    justify-content: space-evenly;
+}
+.dailyDealsSection .dailyDealsBox .firstDailyDealProduct .textContent .dailyTextBox2 .dailyProductColors{
+    width: 100%;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    position: relative;
+    right: 10px;
+}
+.dailyDealsSection .dailyDealsBox .firstDailyDealProduct .textContent .dailyTextBox2 .dailyProductColors .colorsBox{
+    height: 100%;
+    width: 50px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    right: 0px;
+}
+.dailyDealsSection .dailyDealsBox .firstDailyDealProduct .textContent .dailyTextBox2 .dailyProductColors .colorsBox .eachColor{
+    display: flex;
+    height: 17px;
+    width: 17px;
+    background-color: red;
+    border-radius: 50%;
+}
+.dailyDealsSection .dailyDealsBox .firstDailyDealProduct .textContent .dailyTextBox2 .dailyProductColors .colorsBox .eachColor1{
+    margin-left: 2px;
+    background-color: #22201f;
+}
+.dailyDealsSection .dailyDealsBox .firstDailyDealProduct .textContent .dailyTextBox2 .dailyProductColors .colorsBox .eachColor2{
+    background-color: #d1d1d1;
+    margin-left: -5px;
+}
+.dailyDealsSection .dailyDealsBox .firstDailyDealProduct .textContent .dailyTextBox2 .dailyProductColors .colorsBox .eachColor3{
+    background-color: #d48f87;
+    margin-left: -5px;
+}
+.dailyDealsSection .dailyDealsBox .firstDailyDealProduct .textContent .dailyTextBox2 .addToCartButton{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.dailyDealsSection .dailyDealsBox .firstDailyDealProduct .textContent .dailyTextBox2 .addToCartButton button{
+    position: relative;
+    margin-right: 10px;
+    height: 30px;
+    width: 100px;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    color: white;
+    background-color: #1A2024;
+    font-weight: 700;
+}
