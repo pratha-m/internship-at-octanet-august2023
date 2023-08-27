@@ -54,6 +54,25 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: rgb(255,231,231,0.7);
+    border-radius: 20px;
+    animation:beats 1.5s infinite;
+    transition: all 1.5s;
+}
+@keyframes beats{
+    0%{
+        background-color: rgb(255,231,231,0.7);
+    }
+    50%{
+        background-color: rgb(255,231,231,0.9);
+    }
+    
+    80%{
+        background-color: rgb(255,231,231,1);
+    }
+    100%{
+        background-color: rgb(255,231,231,0.7);
+    }
 }
 .bestSellersSection .bestSellersBox .eachBestSeller .eachBestSellerText{
     height: 60px;

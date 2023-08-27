@@ -13,6 +13,8 @@
     /* height: 100%;
     width: 100%; */
     display: flex;
+    animation:beats 1.5s infinite;
+    transition: all 1.5s;
 }
 .imageSlider .images img{
     height: fit-content;

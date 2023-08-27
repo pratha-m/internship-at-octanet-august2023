@@ -49,6 +49,7 @@
     display: flex;
     align-items: center;
     justify-content: flex-end;
+    
 }
 .categoriesSection .categoriesBox .eachCategoryItem .eachCategoryImage img{
     width: 100%;
